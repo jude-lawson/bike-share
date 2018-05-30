@@ -1,0 +1,8 @@
+%h1= @accessory.title
+
+%p= @accessory.title
+%p= @accessory.description
+%p= number_to_currency(@accessory.price)
+
+%li
+= link_to 'Add to Cart', carts_path(item_id: @accessory.id), method: :post

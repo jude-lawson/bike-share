@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :accessories, path: 'bike-shop', only: [:index]
+  resources :accessories, path: 'bike-shop', only: [:index, :show]
   root 'root#index'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
